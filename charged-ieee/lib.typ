@@ -176,8 +176,14 @@
       show std.title: set align(center)
       show std.title: set par(leading: 0.5em)
       show std.title: set text(size: 24pt, weight: "regular")
-      show std.title: set block(below: 8.35mm)
+      show std.title: set block(below: 8.35mm, width: 100%)
+
       std.title()
+
+      if authors.len() == 0 {
+        v(8.35mm)
+      }
+
 
       // Display the authors list.
       set par(leading: 0.6em)
